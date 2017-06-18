@@ -1,0 +1,31 @@
+Table Normalization Explanation
+
+Work Activities Table 
+
+This is the main table in the database. It includes onet_code and position_id
+which show up in other tables. The onet_code is dependent on other values which
+relate to the first rule of normalization. This table is the largest in the 
+database and depends upon other ones.
+
+Level Scale Anchors
+
+This table is dependent upon the Work Activities table because they connect and
+contain values like job_id. The second normal form can't be applied because not 
+every attribute is not dependent on onet_code.
+
+Green Occupations 
+
+onet_code connects the table to the work activities table. The first rule of 
+normalization still applies because onet_code still can't be connected to all
+the tables.
+
+Career Starters Maxtrix
+
+In the Career Starters Maxtrix table, onet_code also connects everything to the 
+Work Activities table. The first normal rule still applies.
+
+Alternate Titles 
+
+In the Alternate titles table, onet_code is also used, this is used to connect
+all the databases together. The first normal rule applies for the entire 
+database.  
