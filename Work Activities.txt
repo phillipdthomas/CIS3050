@@ -1,0 +1,37 @@
+/*! START TRANSACTION */;
+
+CREATE TABLE Work_Activities
+(
+onet_code CHARACTER (10) NOT NULL, 
+position_id VARCHAR (20) NOT NULL,
+job_id VARCHAR (3) NOT NULL,
+information_value DECIMAL (5,2) NOT NULL, 
+m DECIMAL (4,0),
+normal_error DECIMAL(5,2),
+low_bound DECIMAL(5,2),
+up_bound DECIMAL(5,2),
+recommend_supress CHARACTER(1),
+not_important CHARACTER(1),
+last_updated DATE NOT NULL,
+source VARCHAR (30) NOT NULL,
+FOREIGN KEY (onet_code) REFERENCES occupation_data(onet_code),
+FOREIGN KEY (position_id) REFERENCES content_model_reference(position_id),
+FOREIGN KEY (job_id) REFERENCES scales_reference(job_id));
+
+/*! COMMIT */;
+/*! START TRANSACTION */;
+
+INSERT INTO Work_Activities (onet_code, position_id, job_id, information_value, m, normal_error, low_bound, up_bound, recommend_supress,not_important, last_updated, source)
+VALUES ('11-1011.00', '4.A.1.a.2', 'IM', 3.68, 35, 0.17, 3.33, 4.03, 'N', NULL, '2014-07-01', 'Incumbent');
+
+INSERT INTO Work_Activities (onet_code, position_id, job_id, information_value, m, normal_error, low_bound, up_bound, recommend_supress,not_important, last_updated, source)
+VALUES ('11-1011.00', '4.A.1.a.1', 'LV', 5.35, 35, 0.23, 4.89, 5.81, 'N', 'N', '2014-07-01', 'Incumbent');
+
+INSERT INTO Work_Activities (onet_code, position_id, job_id, information_value, m, normal_error, low_bound, up_bound, recommend_supress,not_important, last_updated, source)
+VALUES ('11-1011.00', '4.A.1.b.2', 'IM', 2.38, 35, 0.29, 1.80, 2.96, 'N', NULL, '2014-07-01', 'Incumbent');
+
+INSERT INTO Work_Activities (onet_code, position_id, job_id, information_value, m, normal_error, low_bound, up_bound, recommend_supress,not_important, last_updated, source)
+VALUES ('11-1011.00', '4.A.2.a.1', 'IM', 4.35, 35, 0.18, 3.98, 4.73, 'N', NULL, '2014-07-01', 'Incumbent');
+
+INSERT INTO Work_Activities (onet_code, position_id, job_id, information_value, m, normal_error, low_bound, up_bound, recommend_supress,not_important, last_updated, source)
+VALUES ('11-1011.00', '4.A.2.a.2', 'LV', 5.33, 35, 0.31, 4.70, 5.96, 'N', 'N', '2014-07-01', 'Incumbent');

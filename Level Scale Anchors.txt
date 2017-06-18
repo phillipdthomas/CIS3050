@@ -1,0 +1,27 @@
+/*! START TRANSACTION */;
+
+CREATE TABLE Level_Scale_Anchors
+(
+position_id VARCHAR (20) NOT NULL,
+job_id VARCHAR (3) NOT NULL,
+job_worth DECIMAL (3,0) NOT NULL,
+job_description CHARACTER VARYING (1000) NOT NULL,
+FOREIGN KEY (position_id) REFERENCES content_model_reference(position_id),
+FOREIGN KEY (job_id) REFERENCES scales_reference(job_id));
+
+/*! COMMIT */;
+/*! START TRANSACTION */;
+
+INSERT INTO Level_Scale_Anchors (position_id, job_id, job_worth, job_description)
+VALUES ('1.A.1.a.1',	'LV',	'2',	'Understand a television commercial');
+
+INSERT INTO Level_Scale_Anchors (position_id, job_id, job_worth, job_description)
+VALUES ('1.A.1.a.2',	'LV',	'2',	'Understand signs on the highways');
+
+INSERT INTO Level_Scale_Anchors (position_id, job_id, job_worth, job_description)
+VALUES ('1.A.1.a.4',	'LV',	'4',	'Write a job recommendation for a subordinate');
+
+INSERT INTO Level_Scale_Anchors (position_id, job_id, job_worth, job_description)
+VALUES ('1.A.1.a.4',	'LV',	'1',	'Write a note reminding someone to take food out of the freezer');
+
+/*! COMMIT */;

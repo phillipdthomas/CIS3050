@@ -1,0 +1,23 @@
+/*! START TRANSACTION */;
+
+CREATE TABLE Green_Occupations
+(
+onet_code CHARACTER(10) NOT NULL,
+type_of_green_job VARCHAR(40) NOT NULL,
+FOREIGN KEY (onet_code) REFERENCES job_data (onetsoc_code));
+/*COMMIT */;
+/* START TRANSACTION */;
+
+INSERT INTO Green_Occupations (onet_code, type_of_green_job)
+VALUES ('11-3051.03', 'Green New & Emerging');
+
+INSERT INTO Green_Occupations (onet_code, type_of_green_job)
+VALUES ('11-9013.02', 'Green Enhanced Skills');
+
+INSERT INTO Green_Occupations (onet_code, type_of_green_job)
+VALUES ('13-1021.00', 'Green Increased Demand');
+
+INSERT INTO Green_Occupations (onet_code, type_of_green_job)
+VALUES ('19-2042.00', 'Green Enhanced Skills');
+
+/*! COMMIT */;
